@@ -1,7 +1,7 @@
 # Webmapper
-## Die Installationsroutine für ein Web-Mapping-Portal mit Ubuntu, Apache, QGIS Server, PostgreSQL und Lizmap
+## Die Installationsroutine für ein Webmapping-Portal mit Ubuntu, Apache, QGIS Server, PostgreSQL und Lizmap
 
-Für die Installation der Web-Map-Anwendung werden die folgenden Komponenten vorausgesetzt:
+Für die Installation der Webmap-Anwendung werden die folgenden Komponenten vorausgesetzt:
 
 	- Ubuntu 22.04 Pro LTS (als virtuelle Maschine, im Idealfall neu und leer)	
 	
@@ -23,7 +23,7 @@ Folgende Anwendungen und Pakete, zusätzlich der durch diese Pakete selbstständ
 	
 	- libapache2-mod-php7.3
 	
-	- lizmap (Web-Map-Client; von GitHub)
+	- lizmap (Webmap-Client; von GitHub)
 	
 	- php7.3-cgi
 	
@@ -62,7 +62,7 @@ Folgende Anwendungen und Pakete, zusätzlich der durch diese Pakete selbstständ
 ### Installationsanleitung
 
 #### Herunterladen der nötigen Dateien
-Um die Web-Map-Anwendung zu installieren, müssen die Webmapper-Dateien aus GitHub heruntergeladen und gegebenenfalls per SSH (ssh username@ip) in das Homeverzeichnisses des Maschinenusers (/home/USERNAME) verschoben werden. Es müssen die folgenden Dateien und Ordner vorhanden sein:
+Um die Webmap-Anwendung zu installieren, müssen die Webmapper-Dateien aus GitHub heruntergeladen und gegebenenfalls per SSH (ssh username@ip) in das Homeverzeichnisses des Maschinenusers (/home/USERNAME) verschoben werden. Es müssen die folgenden Dateien und Ordner vorhanden sein:
 
 	- wm-install.sh
 	
@@ -83,7 +83,7 @@ Um die Installation zu starten muss der folgende Befehl in Ubuntu eingegeben wer
 #### Beantworten der Nutzerinteraktion
 Zu Beginn der Installation werden einige Information von Ihnen abgefragt, die für die Installation vonnöten sind. Diese Informationen werden in einem Dialog abgefragt, der sich selbst erklärt. Folgende Informationen werden abgefragt:
 	
-	- Anwendungsname (Die Web-Map-Anwendung wird unter domain/ANWENDUNGSNAME erreichbar sein)
+	- Anwendungsname (Die Webmap-Anwendung wird unter domain/ANWENDUNGSNAME erreichbar sein)
 	
 	- Datenbankname
 	
@@ -95,7 +95,7 @@ Zu Beginn der Installation werden einige Information von Ihnen abgefragt, die f�
 Sollten Sie zwei leere, unpartitionierte Festplatten im System haben, werden Sie zusätzlich nach der zu verwendenden Festplatte gefragt.
 
 #### Installation abwarten
-Nach Durchlaufen der Nutzerinteraktion startet die Installation und Konfiguration der Web-Map-Anwendung und aller benötigter Komponenten. Die Installationszeit beträgt erfahrungsgemäß ca. 5 Minuten.
+Nach Durchlaufen der Nutzerinteraktion startet die Installation und Konfiguration der Webmap-Anwendung und aller benötigter Komponenten. Die Installationszeit beträgt erfahrungsgemäß ca. 5 Minuten.
 
 ### Nach der Installation
 
@@ -126,7 +126,7 @@ Zum Beispiel:
 Erstellen Sie eine neue PostGIS Verbindung in QGIS, indem Sie den Namen des Services angeben, der in der PGSERVICEFILE in eckigen Klammern definiert ist und testen diese.
 
 #### Hochladen von Projekten
-Erstellen Sie ein Projekt in QGIS und speichern es als .qgs, statt .qgz. Dieses Projekt darf Layer enthalten, die in der PostGIS Datenbank gespeichert sind. Für Layer, die in der Web-Map-Anwendung bearbeitet werden sollen, ist dies sogar erforderlich. Alle anderen Layer sollten im selben Ordner wie das Projekt oder in entsprechenden Unterordnern liegen.
+Erstellen Sie ein Projekt in QGIS und speichern es als .qgs, statt .qgz. Dieses Projekt darf Layer enthalten, die in der PostGIS Datenbank gespeichert sind. Für Layer, die in der Webmap-Anwendung bearbeitet werden sollen, ist dies sogar erforderlich. Alle anderen Layer sollten im selben Ordner wie das Projekt oder in entsprechenden Unterordnern liegen.
 Nehmen Sie Ihre bevorzugten Einstellungen im Tab QGIS Server der Projekteinstellungen vor und speichern Sie das Projekt.
 Öffnen Sie das Lizmap Plugin, nehmen Sie die gewünschten Einstellungen vor und speichern das QGIS Projekt erneut.
 Verschieben Sie den Projektordner in seiner bestehen Struktur (z.B per FileZilla) auf den Ubuntu unter /home/USERNAME/ANWENDUNGSNAME/projektordner. Dieser Ordner muss neben der .qgs-Projektdatei und allen Layern, die nicht in PostGIS gespeichert sind, auch die vom Lizmap-Plugin erstellte Datei projektname.qgs.cfg enthalten.
